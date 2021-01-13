@@ -1,0 +1,91 @@
+body{background-color: LightGray;
+         font-family:'Courier New', monospace;
+         font-size: 150%;}
+@font-face{
+font-family: sundayFont;
+src: url(Hannah.ttf);
+}
+
+#name{     
+             text-align: center;
+             vertical-align: middle;
+             font-family: sundayFont;
+             font-size: 80%;
+             margin-top:100px;
+   
+}
+
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+}
+
+.container{
+color: white;
+}
+
+.container .circle{
+								display: inline-block;
+								text-align: center;
+								line-height: 150px;
+        					    height: 150px;
+      					        width: 150px;
+       						    background-color:indigo;
+     					        border-radius: 50%;
+     					        position: absolute;     					    		       
+        					   }	   
+#about:hover{
+background-image: url("photos/young.jpeg");
+     		background-size: cover;
+     		}
+#education:hover{
+background-image:url("photos/durham.jpeg");
+background-size: cover;
+}
+    
+#work:hover{
+background-image:url("photos/pub.png");
+background-size: cover;
+}
+
+#education {
+    top: 50px;
+    right: 300px;
+}
+
+#about {
+    right: 230px;
+    top: 200px;
+}
+
+#work {
+    right: 300px;
+    top: 350px;
+}
+
+#coding {
+    top: 350px;
+    left: 280px;
+}
+#projects {
+    left: 230px;
+    top: 195px;
+}
+
+#contact {
+    left:300px;
+    top: 50px;
+
+
+}
+
+
