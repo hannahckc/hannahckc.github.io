@@ -1,28 +1,53 @@
-body{background-color: LightGray;
+body{background-color: #F8F8F8;
          font-family:'Courier New', monospace;
-         font-size: 150%;}
+         font-size: 150%;
+         text-align:center;
+         }
+
 @font-face{
-font-family: sundayFont;
-src: url(Hannah.ttf);
+font-family: hannah;
+src: url(fonts/Hannah.ttf);
 }
 
+@font-face{
+font-family: amelie;
+src: url(fonts/amelie.otf)
+}
+
+@font-face{
+font-family: caviar;
+src: url(fonts/CaviarDreams.ttf)
+}
+
+@font-face{
+font-family: sig;
+src: url(fonts/mon.ttf)}
+/* Home Page */
+
+.screen{
+position:relative}
+
+h1{
+font-family:hannah}
+
 #name{     
-             text-align: center;
-             vertical-align: middle;
-             font-family: sundayFont;
-             font-size: 80%;
-             margin-top:100px;
-   
+  text-align: center;
+  vertical-align: middle;
+  font-family: hannah;
+  font-size: 1.9vw;
+  margin:10% 20% 20% 20%;
 }
 
 .circular--landscape {
   display: inline-block;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 25vw;
+  height: 25vw;
   overflow: hidden;
   border-radius: 50%;
 }
+
+h4{line-height: 200%;}
 
 .circular--landscape img {
   width: auto;
@@ -31,22 +56,34 @@ src: url(Hannah.ttf);
 
 .container{
 color: white;
+font-size: 1.5vw;
+
+
+
 }
 
-.container .circle{
-								display: inline-block;
-								text-align: center;
-								line-height: 150px;
-        					    height: 150px;
-      					        width: 150px;
-       						    background-color:indigo;
-     					        border-radius: 50%;
-     					        position: absolute;     					    		       
-        					   }	   
+.circle{
+								
+								
+  width: 9vw;
+  height: 9vw;
+  background-color:indigo;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  padding: 10px;
+  overflow-wrap: break-word
+     					        }
+     					       
+				             					    		       
+        					      
 #about:hover{
 background-image: url("photos/young.jpeg");
-     		background-size: cover;
-     		}
+background-size: cover;
+}
+
 #education:hover{
 background-image:url("photos/durham.jpeg");
 background-size: cover;
@@ -57,35 +94,488 @@ background-image:url("photos/pub.png");
 background-size: cover;
 }
 
-#education {
-    top: 50px;
-    right: 300px;
+#coding:hover{
+background-image:url("photos/coding.jpg");
+background-size:cover;
 }
 
+#projects:hover{
+background-image:url("photos/events.png");
+background-size:cover;
+}
+
+#contact:hover{
+background-image:url("photos/contact.jpg");
+background-size:cover;
+right: 50px;
+
+}
+
+
+#education {
+    right:250px;
+    top: 50px;
+    }
+    
 #about {
-    right: 230px;
-    top: 200px;
+    right: 200px;
+    top: 275px;
+    
 }
 
 #work {
-    right: 300px;
-    top: 350px;
+    right: 250px;
+    top: 500px;
+    
 }
 
 #coding {
-    top: 350px;
-    left: 280px;
+    top: 500px;
+    left: 250px;
+ 
 }
 #projects {
-    left: 230px;
-    top: 195px;
-}
+    left: 200px;
+    top: 275px;
+    }
 
 #contact {
-    left:300px;
+    left:250px;
     top: 50px;
-
 
 }
 
 
+
+
+a:link{
+  color:white;
+}
+a:visited{
+  color:white;
+}
+a:hover{
+  color:white;
+}
+a:focus{
+  color:white;
+}
+a:active{
+  color:grey;
+}
+
+/* Contact */
+
+
+#contact1{
+margin:50px;
+font-family:hannah;
+font-size: 400%;
+}
+
+#contact2{
+margin:70px;
+font-family:sig;
+font-size: 170%;
+color: grey;
+}
+
+#back{
+right: 180px;
+top: 20px;
+line-height: 40px;
+}
+
+#incontact{
+left: 180px;
+top: 20px;
+line-height:32px;
+background-color:#00008B;
+}
+
+#contactdet{
+font-family:caviar;
+}
+
+.button{
+background-color: #4682B4;
+color: white;
+font-size: 16px;
+padding: 15px 32px;
+border: 2px solid white;
+border-radius: 5px;
+cursor: pointer;
+}
+
+/* Education */
+
+#back1{
+left: 180px;
+top: 20px;
+line-height: 40px;
+}
+body{background-color: #F8F8F8;
+         font-family:'Courier New', monospace;
+         font-size: 150%;
+         text-align:center;
+         }
+
+@font-face{
+font-family: hannah;
+src: url(fonts/Hannah.ttf);
+}
+
+@font-face{
+font-family: amelie;
+src: url(fonts/amelie.otf)
+}
+
+@font-face{
+font-family: caviar;
+src: url(fonts/CaviarDreams.ttf)
+}
+
+@font-face{
+font-family: sig;
+src: url(fonts/mon.ttf)}
+/* Home Page */
+
+.screen{
+position:relative}
+
+h1{
+font-family:hannah}
+
+#name{     
+  text-align: center;
+  vertical-align: middle;
+  font-family: hannah;
+  font-size: 1.9vw;
+  margin:10% 20% 20% 20%;
+}
+
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 25vw;
+  height: 25vw;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+h4{line-height: 200%;}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+}
+
+.container{
+color: white;
+font-size: 1.5vw;
+
+
+
+}
+
+.circle{
+								
+								
+  width: 9vw;
+  height: 9vw;
+  background-color:indigo;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  padding: 10px;
+  overflow-wrap: break-word
+     					        }
+     					       
+				             					    		       
+        					      
+#about:hover{
+background-image: url("photos/young.jpeg");
+background-size: cover;
+}
+
+#education:hover{
+background-image:url("photos/durham.jpeg");
+background-size: cover;
+}
+    
+#work:hover{
+background-image:url("photos/pub.png");
+background-size: cover;
+}
+
+#coding:hover{
+background-image:url("photos/coding.jpg");
+background-size:cover;
+}
+
+#projects:hover{
+background-image:url("photos/events.png");
+background-size:cover;
+}
+
+#contact:hover{
+background-image:url("photos/contact.jpg");
+background-size:cover;
+right: 50px;
+
+}
+
+
+#education {
+    right:250px;
+    top: 50px;
+    }
+    
+#about {
+    right: 200px;
+    top: 275px;
+    
+}
+
+#work {
+    right: 250px;
+    top: 500px;
+    
+}
+
+#coding {
+    top: 500px;
+    left: 250px;
+ 
+}
+#projects {
+    left: 200px;
+    top: 275px;
+    }
+
+#contact {
+    left:250px;
+    top: 50px;
+
+}
+
+
+
+
+a:link{
+  color:white;
+}
+a:visited{
+  color:white;
+}
+a:hover{
+  color:white;
+}
+a:focus{
+  color:white;
+}
+a:active{
+  color:grey;
+}
+
+/* Contact */
+
+
+#contact1{
+margin:50px;
+font-family:hannah;
+font-size: 400%;
+}
+
+#contact2{
+margin:70px;
+font-family:sig;
+font-size: 170%;
+color: grey;
+}
+
+#back{
+right: 180px;
+top: 20px;
+line-height: 40px;
+}
+
+#incontact{
+left: 180px;
+top: 20px;
+line-height:32px;
+background-color:#00008B;
+}
+
+#contactdet{
+font-family:caviar;
+}
+
+.button{
+background-color: #4682B4;
+color: white;
+font-size: 16px;
+padding: 15px 32px;
+border: 2px solid white;
+border-radius: 5px;
+cursor: pointer;
+}
+
+/* Education */
+
+.wholescreen{
+    display:none;
+    top:0;
+    left:0;
+    min-width:100%;
+    min-height:100%;/*these make the opacity provider fill the screen*/
+    opacity:0.7;
+    -webkit-transition-duration: 3s;
+    position:absolute;
+     background:white;
+  z-index:100;
+    }
+
+#back1{
+left: 180px;
+top: 20px;
+line-height: 40px;
+}
+
+#ineducation{
+right: 180px;
+top: 20px;
+line-height:32px;
+background-color:#00008B;
+}
+
+#education1{
+font-size:250%}
+
+#sixthwhole{
+position:fixed;
+}
+
+#buttonsixth{
+position:fixed;
+bottom:20px;}
+
+#sixth{
+font-size:3vw;
+position: fixed;
+transform: rotate(17deg);
+top: 450px;
+left: 10px;
+letter-spacing: 5px;}
+
+.sixthCircleClass{
+  width: 30vw;
+  height: 30vw;
+  background-color:99CCFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  padding: 10px;
+  overflow-wrap: break-word;
+  top: 500px;
+  left: -50px;
+  -webkit-transition-duration: 3s}
+
+.uniCircleClass{
+  width: 35vw;
+  height: 35vw;
+  background:#E6E6FA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  padding: 10px;
+  overflow-wrap: break-word;
+  top: 300px;
+  left: 1000px;
+  -webkit-transition-duration: 3s;
+  }
+  
+#ineducation{
+right: 180px;
+top: 20px;
+line-height:32px;
+background-color:#00008B;
+}
+
+#education1{
+  font-size:250%}
+
+#uni{
+font-size:3vw;
+position: fixed;
+transform: rotate(-46deg);
+top: 330px;
+right: 100px;
+letter-spacing: 7px;}
+
+
+  
+#description{
+left:300px;
+top: 160px;
+position: fixed;
+font-family: sig;
+font-size: 4vw;
+color:grey;
+}
+
+#arrow1{
+transform: rotate(-40deg);
+font-size: 10vw;
+position: fixed;
+top: 130px;
+right: 1100px;
+color: grey;
+}
+
+#arrow2{
+position:fixed;
+transform: scale(-1,1) rotate(10deg);
+font-size: 11vw;
+top:50px;
+color:grey;
+right:450px;
+}
+
+.sixthmove{
+  width: 35vw;
+  height:35vw;
+  background-color:99CCFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  padding: 10px;
+  overflow-wrap: break-word;
+  top: 100px;
+  left: 400px;
+  z-index: 101;
+}
+
+.unimove{
+  width: 38vw;
+  height:38vw;
+  background-color:#E6E6FA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  padding: 10px;
+  overflow-wrap: break-word;
+  top: 100px;
+  left: 400px;
+  z-index: 101;
+}

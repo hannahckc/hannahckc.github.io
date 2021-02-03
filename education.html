@@ -1,0 +1,70 @@
+<! DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://tympanus.net/Development/Arctext/js/jquery.arctext.js"></script>
+<script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<br>
+
+<h1 id="education1">My Education</h1>
+
+<div class="container">
+<a href="index.html"> <div class="circle" id="back1"> Back to home </div> </a> </div>
+
+<div class="container">
+<div class="circle" id="ineducation">You are in Education </div> </a>
+</div>
+
+<p id ="description">Click on one of these to learn more </p>
+  <p id ="arrow1">
+  &#10553 </p>
+  <p id="arrow2">
+  &#10553 </p>
+
+
+
+  <div id = "sixth">
+    Sixth Form
+  </div>
+
+  <div id = "sixthcircle" class="sixthCircleClass">
+Text here
+  </div>
+
+
+  
+  <div id = "uni">
+    University
+  </div>
+  
+  <div id = "unicircle" class="uniCircleClass">
+    I attended uni... 
+  </div>
+
+<div id="screen" class="wholescreen"> 
+</div>
+
+<script>
+  $().ready(function(){
+  $('#sixth').arctext({radius:200})});
+  $().ready(function(){
+  $('#uni').arctext({radius:300})});
+ 
+  $('#sixthcircle').click(function(){
+  $(this).toggleClass("sixthmove", "sixthCircleClass");
+  $('#screen').toggle()
+  })
+  
+  $('#unicircle').click(function(){
+  $(this).toggleClass("unimove", "uniCircleClass");
+  $('#screen').toggle()
+  })
+</script>
+
+</body>
+</html>

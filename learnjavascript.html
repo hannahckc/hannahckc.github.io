@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<h1> Javascript for beginners </h1>
+
+<div id="intro">
+<h1> Introduction </h2>
+<p>
+  Javascript is a very useful language. It can be used with HTML to create buttons and make your content more exciting and dynamic. It can also be used server-side, as well as to write functions to perform calculations and produce reminders. A Javascript program is a list of statements, which are instructions to your computer to complete certain actions.
+</p>
+<p>
+  We can write Javascript in a separate file, and save it as .js. Then we can open it on a web browser and the code will automatically be executed. Alternitavely, it can be used within an HTML document, within &ltscript&gt tags. If you wish to check if your code is working correctly, you may want to use the built in alert() function to see what answer your code is producing. For example, try alert(5+1). It can also be run in the console on your computer. We will be using console.log() to print our answers on this page.
+ </p>
+
+</div>
+<hr>
+
+<div id="functions">
+<h1> Functions </h1>
+<p>
+  Functions have many uses in Javascript, such as mathematical calculations, creating alerts and so much more.
+</p>
+
+<h2> Defining variables </h2>
+<p>
+  We need to first create out variables that we will then put into our functions. There are several different types.
+</p>
+
+<h3>  Assigning variables </h3>
+<p> Creating variables is known as <em>declaring</em> them. </p>
+<code>
+  var a = 7
+</code>
+
+<p> Alternatively, we can declare varaibles and then assign them values. This can be useful if you want to change your values later </p>
+<code>
+  var a,b; <br>
+  a = 7; <br>
+  b = 3; <br>
+  c = a*b <br>
+</code>
+<p> 
+  As you can see, we can declare multiple variables at the same time, to make our code shorter and cleaner. Make sure you separate your code with semi-colons so your program knows you have started a new line. You can re-declare your variables without them losing their value. </p>
+<p> 
+  You can call your variables anything you like, and can contain letters, digits, underscores and dollar signs. Names <bold> cannot </bold> begin with a number. Variable names are also case sensitive. 
+</p>
+
+<h3> Boolean </h3>
+<p> A <em>boolean</em> data type can only be one of two values, true or false. <br>
+Typing <code> 4 > 3 </code> to the console will return 'true'.
+</p>
+
+<h3> Strings </h3>
+<p>
+  As seen above, one variable type is a numbers. The other most useful type is a <em>string</em>. These are words or sentances, and we put quotation marks " " or ' ' around them.
+</p>
+<code>
+var Dog = "Bruno";
+var alarm = 'Wake up!';
+</code>
+
+<h3> Javascript Arithemtic </h3>
+<p>
+  As you have seen above, we can use operators +, -, *, / to perform mathematical calcualtions. We can also use the + sign to <em>concatenate</em> strings.
+</p>
+<code>
+  var x = "Hello" + " " + "World";
+</code>
+gives x as "Hello World". <br> <br>
+
+If you put numbers in quote marks, the rest of the numbers will also be treated as strings. For example:<br> <br>
+<code> 
+  var y = "2" + 7 + 8;
+</code>
+gives x as "278". <br> <br>
+<code>
+  var z = 4 + 1 + "6"
+</code>
+gives x as "56".
+
+<h2> Declaring functions </h2>
+<p> To declare functions you must include: <p> <ul>
+<li> The <em>function keyword.</em> </li>
+<li> The name of the function, called the <em>identifier</em>, followed by a set of brackets. </li>
+<li> The function body, which is a set of statements inside curly brackets, that actually tell the program what the function does. </li>
+</ul>
+
+For example: <br>
+<code>
+  function hello(){console.log("hello")};
+</code>
+
+<h2> Calling Functions </h2>
+<p> Once we have created our functions, we need to actually be able to use them. To tell our program to run the function, simply state the function identifier along with brackets. You can call your functions as many times as you like. </p>
+<code>
+  hello()
+</code>
+
+<h2> Functions with parameters </h2>
+<p> If you have used functions in maths before, they are usually written in terms of varaibles. We want to be able to put different values into our functions to make them more versatile. </p>
+<code>
+  function f(x,y){console.log(2*x+y)}
+</code>
+<p> Running <code>f(3,4)</code> will print 10 to the console. </p>
+You can call your variables, or <em>parameters</em> anything you like, for example: <br> <br>
+<code>
+  function goodbye(name){console.log("goodbye" + " " + name)}
+</code>
+<p> Calling <code>goodbye("James")</code> will print "goodbye James" to the console. </p>
+The values you pass through your functions are known as <em>arguments</em>.
+
+<h2> Default parameters </h2>
+<p>
+  We may want to be able to run our functions even when no arguments have been given. To do this we use default parameters.
+</p>
+<code>
+  function favourite(animal = 'all of them!'){console.log('My favourite animals are ${animal}!')}
+</code>
+<p> If we call <code> favourite() </code> the output will be 'My favourite animals are all of them!' <br>
+If we call <code> favourite('dogs') </code> the output will be 'My favourite animals are dogs' </p>
+
+<h2> Return Statements </h2>
+<p>
+  At the moment the values our functions are producing are being printed but not stored anywhere. This isn't very useful if we want to use those values later on. There is a simple way to do this, with a return statement.
+</p>
+<code>
+  function mult(a,b){return a*b}
+</code> <br> <br>
+We can then print this to make sure our function has worked correctly: <br>
+<code>
+  var number = mult(3,7); <br>
+  console.log(number);
+</code> <br>
+will return 21.
+
+<h2> Helper Functions </h2>
+<p>
+  It is a good idea to create multiple functions and combine them rather than having long complicated functions. This makes your code easier for you to fix if something goes wrong, and also for someone else to read.
+</p>
+<p>
+  For example, say we want to create a function that converts celcius to fahrenheit. 
+</p>
+<code>
+  function multNineFifiths(number){return number*(9/5)}; <br>
+  function fahrenheit(celcius){return multNineFifths(celcius)+32}; <br>
+  fahrenheit(20)</code> will return 68.
+
+<h2> If Statements </h2>
+<p> We may want to check if a condition is true or not, to do this we can use if statements. </p>
+<code>
+  var number = 5
+  if(number > 4){return 'bigger'}
+</code>
+<p> We can add else if statements to account for different scenarios, and a final else statement if none of the if statements hold true. </p>
+<code>
+  var number = 5
+  if(number > 4){return 'bigger'}
+  else if(number < 4){return 'smaller'}
+  else{return 'the number is 4'}
+</code>
+<p> It can make more sense to turn this into a function: </p>
+<pre>
+function isBigger(number){
+  if(number > 4){return 'bigger'}
+  else if(number < 4){return 'smaller'}
+  else{return 'the number is 4'}}
+console.log(isBigger(6))
+</pre>
+<p> Once a condition has been met, the program will stop running through the statements. So it is important we pay attention to the order of the statements. For example, if we add the condition that the number is 5: </p>
+<pre>
+function isBigger(number){
+  if(number === 5){return 'the number is 5'}
+  else if(number > 4){return 'bigger'}
+  else if(number < 4){return 'smaller'}
+  else{return 'the number is 4'}}
+console.log(isBigger(5))
+</pre>
+will return 'the number is 5'. But
+<pre>
+function isBigger(number){
+  if(number > 4){return 'bigger'}
+  else if(number === 5){return 'the number is 5'}
+  else if(number < 4){return 'smaller'}
+  else{return 'the number is 4'}}
+console.log(isBigger(5))
+</pre>
+will return 'bigger'.
+
+</div>
+<hr>
+
+<div id="arrays">
+
+<h1> Arrays </h1>
+
+<h2> Creating Arrays </h2>
+<p> Arrays are like lists, they are Javascript's way of storing data, they are made up of <em>elements</em>. These lists are ordered, meaning each element has a numbered position. </p>
+
+<p> These arrays can contain any combination of data types, and are represented by square brackets [ ]. For example: </p>
+<code> [10, 'The World, true] </code>
+
+<p> We create arrays the same way we create variables: </p>
+<code> var greetings = ['hello', 'hi, 'how are you?'] </code>
+
+<h2> Accessing Array Elements </h2>
+<p> Array elements are numbered, but the first element is the 0th element, the second the 1st, etc. This is called being <em>zero-indexed</em>. We can access specific elements by using bracket notation and the index. We can access the first element in the above list, 'hello', with <code>greetings[0]</code>. <br> 
+Typing <code> console.log(greetings[2]) </code> will print 'how are you?' to the console.
+
+<p> Once we have accessed these elements, we can update and change the elements in our lists. </p>
+For example: <br>
+<code> greetings[1] = 'Goodbye' </code> changes the second element of the list to 'Goodbye'. 
+
+<h2> Array Properties </h2>
+<p> We can find the length of an array using the .length property. We can do this for both strings and arrays. For example, using the above list: </p>
+
+<code> greetings.length </code> will return 3. <br>
+<code> greetings[0].length </code> will return 5.
+
+<h2> Adding and removing elements to an array </h2>
+
+<h3> .push() </h3>
+<p> We can add elements to the end of a list using .push: </p>
+<code> greetings.push('good day') </code> <br> <br>
+Our list will now read <code>['hello', 'hi', 'how are you?', 'good day']</code>
+
+<h3> .pop() </h3>
+<p> We can remove the last element of our list using .pop(), going back to our original array: </p>
+<code> greetings.pop() </code> <br> <br>
+Our list will now read <code> ['hello', 'hi'] </code>
+
+<h3> .shift() </h3>
+<p> We can remove the first element of our array with .shift(): </p>
+<code> greetings.shift() </code> <br> <br>
+Our list will now read <code> ['hi', 'how are you?'] </code>
+
+<h3> .unshift() </h3>
+<p> We can add an element to the start of an array with .unshift(): </p>
+<code> greetings.unshift('hiya') </code> <br> <br>
+Our list will now read <code> ['hiya', 'hello', 'hi', 'how are you?'] </code> 
+<p> Note that if we print the result of greeitngs.unshift(), the output will be the removed element. </p>
+
+<h3> .slice() </h3>
+<p> We can extract parts of a list using .slice() and indexes. </p>
+<code> greetings.slice(0,1) </code> will take the part of the list from the index 0 to the index 1. <br> <br>
+Our list will now read <code> [hello', 'hi'] </code>
+<p> We can use this method on strings as well. For example: </p>
+<code>greetings[0].slice(2,4)</code> will produce 'llo'.
+
+<h3> .indexOf() </h3>
+<p> It may be useful to find the index of a partcular element in our array. </p>
+<code> greetings.indexOf('hi')</code> will return 0. 
+
+<h2> Changing arrays in functions </h2>
+<p> We can put our arrays into functions as we did with variables. If we change an array within a function it will also change outside the function: </p>
+<code>
+function remove(arr){arr.pop()}; <br>
+remove(greetings); <br>
+console.log(greetings)
+</code>
+will produce <code> ['hello', 'hi'] </code>
+<p> We can put this new array into our function again: </p>
+<code> remove(greetings); <br>
+console.log(greetings) </code>
+will produce <code> ['hello'] </code>
+
+<p> If we want to keep our original array, we can simply create a new varaible to store our changed array: </p>
+<code> 
+var greetings1 = remove(greetings); <br>
+</code>
+So the array greetings will stay the same, and we have made a new array, greetings1, with the last element removed.
+
+<h2> Nested Arrays </h2>
+<p> Arrays can contain arrays as their elements, for example: </p>
+<code> 
+  var nestedArr=[[1],[2],[3,4]]
+</code>
+<p> To access elements in nested arrays we use index notation as before: </p>
+<code>
+  console.log(nestedArr[2][1])
+</code>
+will produce 4.
+
+<hr>
+<div id="loops">
+
+<h1>Loops</h1>
+
+<h2> For loops </h2>
+<p>
+  Loops are very useful. For example, say we wanted to print numbers from 1 to 4. Without loops we would have to print every number separately. This might not be so bad for small numbers, but say we wanted to extend this to 100. It would be extremely time consuming.
+</p>
+A for loop starts with the word for, followed by three expressions inside brackets, separated by semicolons:
+<ol>
+<li> An <em>initialization</em> which tells the program where to start the loop, and to declare the iterator variable </li>
+<li> A <em>stopping condition</em>, which the iterator variable is evaluated against. If the condition is true the code block will run, if it is false the code will stop, and the loop will end. </li>
+<li> An <em>iteration statement</em> which is used to update the iterater variable on each loop. </li> </ol>
+Let's look at an example: <br>
+<code> for(counter= 1; counter < 5; counter++){console.log(counter)} </code>
+will print 1 2 3 4 5 to the console. The <code>counter++</code> means the counter increases by 1 on every loop.
+<p> Let's try a more compliacted loop, Take the array <code>[1,2,3,4,5]</code>. We want to create a loop that takes each element in the list, multiplies it by 2, then adds it to a new array:
+<pre>
+var arr=[1,2,3,4,5];
+var newarr=[];
+for(var counter=0; counter&ltarr.length; counter++){
+newarr.push(2 * arr[counter])}
+
+console.log(newarr)
+</pre>
+will produce [2,4,5,8,10]
+
+<h2> Nested loops </h2>
+<p>We can put loops inside other loops, which are called <em>nested</em>. To see why this might be useful let's look at an example. Say we want to count how many elements in a list match with elements in another list: </p>
+
+<pre>
+var list1 = [3,5,1,2,6,4];
+var list2 = [1,7,9,4]
+var counter = 0
+
+for(let i = 0; i < list1.length; i++){
+  for(let j = 0; j < list2.length; j++){
+    if(list1[i] === list2[j]){counter = counter+1}
+  }
+}
+console.log(counter)
+</pre>
+<p> It is standard to use i and j as index counters, but you may call them whatever you like. The first loop takes i as 0 (the first element of list1), then runs through all the elements in list2, to check if it matches any of the elements. Then takes the second element in list1, etc. In this case we get the answer 2. </p>
+
+<h2> While loop </h2>
+<p> Sometimes it is more useful to use while loops, which continue running until a stopping condition is met. We can convert the first for loop example we had into a while loop:
+<pre>
+let i = 1
+while(i < 5){
+  console.log(i);
+  i++}
+</pre>
+<p>
+  While loops are useful when you do not know how many times you will need to run through a block of code. For example you may want to keep generating a random number until you reach a certain one.
+</p>
+
+<h2> Do... While loops </h2>
+<p>These are a slight variation on while loops, because they will always run at least once before checking if the condition is true or not. For example: </p>
+<code>
+do{console.log("yes")}while(true === false)
+</code>
+will print "yes". If we did this as just a while loop: <br>
+<code>
+while(true === false){console.log("yes")}
+</code>
+will not print anything to the console, because the condition is checked first, which will always evaluate to false.
+
+<h2> Break </h2>
+<p>
+  We may want to stop our loop before it reaches the stopping condition. This allows us to add test conditions alongside the stopping condition, which is particularly useful for large data sets. Here is a simple example:
+</p>
+<pre>
+for(var i = 0; i < 99; i++){
+  console.log('The loop is running');
+  if(i > 4){break;}
+}
+</pre>
+will print 'The loop is running' 5 times to the console. The if statement can go before or after the the console.log code.
+
+</div>
+<hr>
+
+<h1> Higher Order Functions </h1>
+
+<h2> Assigning functions to variables </h2>
+<p>
+  Say we have a very long function name, which is informative but is very tedious to write out every time we want to use it, and makes it hard for our code to be read. For example:
+</p>
+var addTwoOneHundredTimes(){
+  while(var i = 0; i <= 100){
+      i = i + 1};
+  console.log(i)}
+
+
+
+
+<script>
+var a,b; 
+  a = 7;
+  b = 3;
+  c = a*b
+<!--alert(c)-->
+function hello(){alert("hello")};
+function favourite(animal = 'all of them!'){alert('My favourite animal is ${animal})};
+favourite('dog')
+<!--hello()-->
+</script>
+
+</html>

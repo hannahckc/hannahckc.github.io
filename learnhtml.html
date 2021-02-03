@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+
+<h1> HTML for beginners </h1>
+<div id="intro">
+<h1> Introduction </h1>
+
+<p>
+  HTML is a very useful language for creating dynamic web pages. To create one, simply open up a text editor (I use CotEditor, but there are many different ones out there). You will then need to save your file as a .html document, then go to your web browser and click open page. You will be able to see what your code produces on the screen.
+</p>
+</div>
+
+<div id="starting">
+<h1> Starting your page </h1>
+<p>
+  All html pages start like this: <br>
+  <code>&lt!DOCTYPE html&gt <br>
+  &lthtml&gt</code> <br>
+  Anything within these triangular brackets are known as <em> tags </em>. Don't forget to close your html tag at the end of your page! <br>
+  <code>&lt/html&gt </code><br>
+  You will need to do this with most of your tags.
+</p>
+
+</div>
+<hr>
+
+<div id="headings">
+<h1> Headings <h1>
+
+<h2> Title </h2>
+<p>
+  This is not visible on the webpage, it appears in the tab title. <br>
+  <title> Learn HTML </title>
+  <code>&lttitle&gt Learn HTML &lt/title&gt</code>
+</p>
+
+<h2> Headings </h2>
+<p>
+  There are six heading sizes:
+  <h1> Heading 1 </h1> 
+  <h2> Heading 2 </h2> 
+  <h3> Heading 3 </h3> 
+  <h4> Heading 4 </h4>
+  <h5> Heading 5 </h5>
+  <h6> Heading 6 </h6>
+  <code> &lth3&gt This is a heading &lt/h3&gt </code>
+</p>
+ 
+ </div>
+ <hr>
+ 
+ <div id="sectioning">
+<h1> Sectioning and organising your code </h1>
+ 
+<p>
+   It is good practice to split your code up with tags. Some tags, such as headings, make a difference visually to the page, others, such as divs, just makes it easier for both you and someone else to read. It will also be very useful when we introduce styling later on. <br>
+   Here are some common tags:
+ </p>
+ 
+ <h2> Paragraphs </h2>
+ <p> Used for blocks of text of any length. It will create a blank line before and after the block, as a paragraph in a book would look. </p>
+ <code> &ltp&gt <br>
+     This is a paragraph with multiple lines, <br>
+     but will be displayed as one line on the web page. <br> &lt/p&gt
+ </code> <br>
+ <p>
+   This is a paragraph with multiple lines, but will be displayed as one line on the web page.
+</p>
+
+<h2> Code </h2>
+<p>
+  Displaying code on a webpage isn't that simple, as it is simply read as code and displayed as it should be. Wrapping your code in the code tag changes the font and helps to group you code, but is not enough on its own. To display a triangular bracket we use '&amplt' and '&ampgt'
+</p>
+<code> &ltcode&gt This is some code &lt/code&gt </code>
+  
+  <h2> Pre </h2>
+<p> 
+  This is a useful tag which is used for displaying code but will take into account any line breaks and spaces within the text.
+</p>
+<pre>
+<code>
+&ltpre&gt
+This is
+a pre section of     text
+&lt/pre&gt 
+</code>
+</pre>
+produces: <br>
+<pre>
+This is
+a pre section of     text
+</pre>
+
+<h2> Horizontal Line </h2>
+<p> 
+  Produces a horizontal line, like above the 'Sectioning your code' heading on this page. This is an <em>empty</em> or <em>self closing</em> tag, which means it has no end tag.
+</p>
+<code> &lthr&gt  </code>
+   
+<h2> Line Break </h2>   
+<p>
+  Starts a new line. You can put as many as you like in a row to skip multiple lines. This is also empty, so doesn't need an end tag. 
+</p>
+<code> &ltbr&gt </code>
+
+<h2> Span </h2>
+<p>
+  Span has no visible difference on the page, but is useful for identifying specific words or parts of a paragraph. It will keep the text inline with the rest of the text, unlike paragraph.
+</p>
+<code> &ltp&gt My name is Hannah. &ltspan&gt I am 24 years old. &lt/span&gt I am from Cambridge &lt/p&gt </code>
+
+<h2> Spacing </h2>
+<p>
+  It is good practice, and makes your code easier to read, to lay it out as follows. If it is a short snippet of code, you can keep it all on one line: <br>
+  <code> &ltp&gt This is a short sentance. &lt/p&gt </code> <br> <br>
+  For longer sections, it is standard to nest your code with a two space indent. You can nest further tags within these sections:
+</p>
+  <code> 
+    <pre>
+&ltp&gt
+  This is a paragraph of text with some
+  &ltcode&gt
+    section of code
+  &lt/code&gt
+  nested within it.
+&lt/p&gt
+</pre>
+</code>
+
+<h2> Div </h2>
+<p>
+  Divs again have no visual effect on the text, but are useful for grouping and sectioning your code, and will be essential for styling with CSS later on. They can contain any number of other tags within them. For example, if you were writing a web page about yourself, you might have one div about your childhood, another about your school life, and another about your hobbies.
+</p>
+<code>
+  &ltdiv&gt This is a div &lt/div&gt
+</code>
+</div>
+
+<hr>
+<div id="id">
+<h1> id's and classes </h1>
+
+<h2> id </h2>
+<p>
+  id's can be applied to almost any element and are very useful for styling in CSS, as well as adding effects to objects like buttons in Javascript. Code can end up being very long and it's very useful to be able to refer back to specific headings or sections later down the line without having to scroll through the whole page. You should give it a name that is easy to remember relates to the section. <strong> id's are unique, only one element can have a specific id. </strong> They are added to tags like this: 
+</p>
+<br>
+<code>
+&lth1 id="first"&gt <br>
+&ltdiv id="hobbies"&gt
+</code> <br>
+Properties that go inside the tag like this are known as <em> attributes </em>.
+
+<h2> Classes </h2>
+Classes are similar to id's but multiple tags can have the same class. For example if your web page had a section for several different people, you might want all of your sections about their family to have the same class. <br>
+<code>
+&ltdiv id="person1" class="family"&gt <br>
+&ltdiv id="person2" class="family"&gt <br>
+</code>
+You can assign multiple classes to the same tag: <br>
+<code>
+&lth1 class="hobbies lifestyle" &gt <br>
+</code>
+Note that this means your class names should not include any spaces or they will be read as two different classes.
+
+</div>
+<hr>
+
+<div id="lists">
+<h1> Lists </h1>
+<p>
+  There are two types of lists, ordered and unordered. You could create your lists with just normal text, but it is much easier to keep track of your elements by using the list tags.
+</p>
+
+<h2> Unordered Lists </h2>
+<pre>
+&ltul&gt
+  &ltli&gt First element &lt/li&gt
+  &ltli&gt Second element &lt/li&gt
+  &ltli&gt Third element &lt/li&gt
+&lt/ul&gt
+</pre>
+
+  <ul>
+    <li> First element </li>
+    <li> Second element </li>
+    <li> Third element </li>
+ </ul>
+  <br>
+  
+<h2> Ordered Lists </h2>
+<pre>
+&ltol&gt
+  &ltli&gt First element &lt/li&gt
+  &ltli&gt Second element &lt/li&gt
+  &ltli&gt Third element &lt/li&gt
+&lt/ol&gt
+</pre>
+
+  <ol>
+    <li> First element </li>
+    <li> Second element </li>
+    <li> Third element </li>
+ </ol>
+ 
+</div>
+<hr>
+
+<div id="links">
+<h1> Links </h1>
+
+<h2> Link to your content </h2>
+<p>
+  This is useful for jumping between sections within your page, or taking the user to the top or bottom of the page. We will use the id's we created to skip to certain divs. 
+</p>
+<br>
+<code>
+&lta href="#headings"&gt Headings &lt/a&gt
+</code>
+<br>
+<a href="#headings"> Headings </a> <br>
+Try clicking it and see what happens! The # refers to an id.
+
+<h2> Link to other sites </h2>
+<code> 
+  &lta href="https://www.google.com/" &gt Search engine here &lt/a&gt
+</code> <br>
+<a href="https://www.google.com/"> Search engine here </a> <br>
+<p>
+  At the moment the link takes us directly to the page. We want it to open in a new tab so the user stays and hopefully comes back to our website. Do do this simple add an atribute of target="blank" to our link. 
+</p> <br>
+<code>
+  &lta href="https://www.google.com/" target="blank"&gt Search engine here &lt/a&gt
+</code> <br>
+<a href="https://www.google.com/" target="blank"> Try this search engine </a> <br>
+
+<h2> Pictures</h2>
+<code>
+  &ltimg src="https://championrowing.org.uk/wp-content/uploads/2016/10/2016_champs_induction_rowing.jpeg"&gt
+</code> <br>
+This is a self closing tag. <br><br>
+<img src="https://championrowing.org.uk/wp-content/uploads/2016/10/2016_champs_induction_rowing.jpeg" width="300"> <br> <br>
+You can change the size of the image by adding a width attribute, the units are pixels. <br>
+<code>
+  &ltimg src="https://championrowing.org.uk/wp-content/uploads/2016/10/2016_champs_induction_rowing.jpeg" width="300"&gt
+</code> <br> <br>
+You can also add a link to a website to a picture. <br> 
+<code>
+   &lta href="https://championrowing.org.uk/about-us/learn-to-row-in-cambridge/"  target="_blank"&gt &ltimg src ="https://championrowing.org.uk/wp-content/uploads/2016/10/2016_champs_induction_rowing.jpeg" /&gt &lt/a&gt
+ </code> <br>
+ <a href="https://championrowing.org.uk/about-us/learn-to-row-in-cambridge/"  target="_blank" > <img width="300" src ="https://championrowing.org.uk/wp-content/uploads/2016/10/2016_champs_induction_rowing.jpeg" /> </a> <br>
+ It is also a good idea to add an alt attribute to your image tag, this text will be shown if the image cannot be displayed on the page.
+ 
+ <h2> Videos </h2>
+ You can embed videos into your web page with the video tag. It is a good idea to add height and width attributes so your page doesn't flicker while the video is loading. 
+ <pre>
+ &ltvideo width="300" height="200" autoplay controls&gt
+   &ltsource src="movie.mp4" type="video/mp4"&gt
+ Video not supported.
+ </pre>
+ The autoplay attribute will autoplay the video when the page loads, the controls attribute will display controls for the user. The text will only be displayed if the video cannot be loaded.
+ 
+ </div>
+ <hr>
+ 
+<div id="tables">
+<h1> Tables </h1>
+<p>
+  Our table will have three sections, the head, the body and the foot. This means you can edit the styling of these individually. When we start the table we can change the border size.
+</p>
+
+ 
+<pre>
+&lttable border="5">
+  &ltthead>
+     &lttr>
+       &ltth> Shape &lt/th&gt
+       &ltth> Number of sides &lt/th&gt
+       &ltth> Number of Vertices &lt/th&gt
+      &lt/tr&gt
+  &lt/thead&gt
+  &lttbody&gt
+      &lttr&gt
+        &lttd&gt Triangle &lt/td&gt
+        &lttd colspan="2"&gt 3 &lt/td&gt
+      &lt/tr&gt
+      &lttr&gt
+        &lttd&gt Cube &lt/td&gt
+        &lttd&gt 6 &lt/td&gt
+        &lttd&gt 8 &lt/td&gt
+      &lt/tr&gt
+  &lt/tbody&gt
+  &lttfoot&gt
+      &lttd&gt Total &lt/td&gt
+      &lttd&gt 9 &lt/td&gt
+      &lttd&gt 11 &lt/td&gt
+  &lt/tfoot&gt
+&lt/table&gt
+ </pre>
+ 
+ <table border="5">
+   <thead>
+     <tr>
+       <th> Shape </th>
+       <th> Number of sides </th>
+       <th> Number of Vertices </th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td> Triangle </td>
+        <td colspan="2"> 3 </td>
+      </tr>
+      <tr>
+        <td> Cube </td>
+        <td> 6 </td>
+        <td> 8 </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <td> Total </td>
+      <td> 9 </td>
+      <td> 11 </td>
+    </tfoot>
+  </table>
+<br>
+As you can see, the colspan="2" means that number spans across two columns. You can do the same for rows with the atribute rowspan.
+
+</div>
+<hr>
+
+<div id="forms">
+<h1> Forms </h1>
+<p> 
+  We may want the user to submit information to us, the way to do this is using form. It is important to label our forms so we can keep track of which information relates to which form.
+</p>
+
+<h2> Short text form </h2>
+<p> The simplest of forms may be used, for example, for a user to submit their name. </p>
+<pre>
+&ltform&gt
+  &ltlabel for="name"&gt Type your name here &lt/label&gt &ltbr&gt
+  &ltinput type="text" name="name" id="name" value="Joe Bloggs"&gt
+&lt/form&gt
+</pre>
+
+<form>
+  <label for="name"> Type your name here </label> <br>
+   <input type="text" name="name" id="name" value="Joe Bloggs"> <br>
+</form>
+
+<p>
+  The label for attribute refers to the id of the input. It appears above the form. Screen reader uses will hear the label read out when focussed on this element. <br>
+  The name attribute will help you match up data when it has been submitted. <br>
+  The value attribute will automatically appear in the form before the user changes it.
+</p>
+
+<h2> Longer text form </h2>
+<p>
+  You can set the maximum length you would like your user's response to be.
+</p>
+
+<pre>
+&ltform&gt
+  &ltlabel for="message">&gt Leave me a message &lt/label&gt &ltbr&gt
+  &ltinput type="text" name="message" id="message" rows="3" cols="40"&gt Your message here!
+&lt/form&gt
+</pre>
+
+<form>
+  <label for="message"> Leave a message </label> <br>
+  <textarea name="message" id="message" rows="3" cols="40"> Your message here! </textarea>
+</form>
+
+<h2> Password </h2>
+<p>
+  If your wesbite requires people to log in, you can use the password type for your input. This will hide the text as you're typing it. Give it a go below.
+</p>
+
+<pre>
+&ltform&gt
+  &ltabel for="password"&gt Password &lt/label&gt &ltbr&gt
+  &ltinput name="password" id="password" type="password"&gt
+&lt/form&gt
+</pre>
+
+<form>
+<label for="password"> Password </label> <br>
+<input name="password" id="password" type="password">
+</form>
+
+<h2> Number forms </h2>
+<p>
+  These would be useful, for example, for your user to enter their age. Only numbers can be typed into this form.
+</p>
+
+<pre>
+&ltform&gt
+  &ltlabel for="age"&gt Age &lt/label&gt &ltbr&gt
+  &ltinput name="age" type="number" step="1" id="age"&gt 
+&lt/form&gt
+</pre>
+
+<form>
+  <label for="age"> Age </label> <br>
+  <input name="age" type="number" step="1" id="age"> 
+</form>
+
+<h2> Range forms </h2>
+<p>
+  This allows the user to answer in the form of a scale. You can choose descriptions for each end of the scale and how many steps in between you would like.
+</p>
+
+<pre>
+&ltform&gt
+  &ltlabel for="hunger"&gt How hungry are you? &lt/label&gt &ltbr&gt
+  &ltspan&gt Famished &lt/span&gt
+  &ltinput id="hunger" name="hunger" type="range" min="0" max="10" step="1"&gt
+  &ltspan&gt Stuffed &lt/span&gt
+&lt/form&gt
+</pre>
+
+<form>
+  <label for="hunger"> How hungry are you? </label> <br>
+  <span> Famished </span>
+  <input id="hunger" name="hunger" type="range" min="0" max="10" step="1">
+  <span> Stuffed </span> <br>
+</form>
+
+<h2> Radio forms </h2>
+<p>
+  Radio forms give just two options, and one must be selected. They are useful for yes/no or on/off type questions.
+</p>
+
+<pre>
+&ltform&gt
+  Do you like dogs?
+  &ltinput type="radio" name="dogs" id="yes" value="yes"&gt 
+  &ltlabel for="yes"&gt Yes &lt/label&gt
+  &ltinput type="radio" name="dogs" id="no" value="no"&gt
+  &ltlabel for="no"&gt No &lt/label&gt
+&lt/form&gt
+</pre>
+
+<form>
+  Do you like dogs? <br>
+  <input type="radio" name="dogs" id="yes" value="yes"> 
+  <label for="yes"> Yes </label>
+  <input type="radio" name="dogs" id="no" value="no">
+  <label for="no"> No </label>
+</form>
+
+<p>
+  The value attribute is what will be submitted to the person recieving the form
+</p>
+
+<h2> Datalist</h2>
+<p>
+  These forms give several options, but also allows the user to type in their own answer. They can choose only one. 
+</p>
+
+<pre>
+&ltform&gt
+  &ltlabel for="breed"&gt What is your favourite breed? &lt/label&gt
+  &ltinput list="breeds" id="breed" name="breed"&gt
+  &ltdatalist id="breeds"&gt
+    &ltoption value="German shepherd"&gt &lt/option&gt
+    &ltoption value="Husky"&gt &lt/option&gt
+    &ltoption value="Spaniel"&gt  &lt/option&gt
+  &lt/datalist&gt
+&lt/form&gt
+</pre>
+
+<form>
+  <label for="breed"> What is your favourite breed? </label>
+  <input list="breeds" id="breed" name="breed">
+  <datalist id="breeds">
+    <option value="German shepherd"> </option>
+    <option value="Husky"> </option>
+    <option value="Spaniel">  </option>
+  </datalist>
+</form>
+
+<h2> Select </h2>
+<p>  Here the user must select one of the options given. </p>
+
+<pre>
+&ltform&gt
+  &ltlabel for="number"&gt How many dogs do you have? &lt/label&gt
+  &ltselect id="number" name="number"&gt
+    &ltoption value="0"&gt 0 &lt/option&gt
+    &ltoption value="1"&gt 1 &lt/option&gt
+    &ltoption value="2+"&gt 2+ &lt/option&gt
+  &lt/select&gt
+&lt/form&gt
+</pre>
+
+<form>
+  <label for="number"> How many dogs do you have? </label>
+  <select id="number" name="number">
+    <option value="0"> 0</option>
+    <option value="1"> 1</option>
+    <option value="2+"> 2+</option>
+  </select>
+</form>
+
+<p>
+  The text in between the option brackets is what will appear in the drop down list.
+</p>
+
+<h2> Checkbox </h2>
+<p>
+  This type of form allows the user to select zero or multiple options from a list. 
+</p>
+
+<pre>
+&ltform&gt
+  What colour of dogs do you like? &ltbr&gt
+  &ltinput type="checkbox" id="colour1" name="colour1" value="Black"&gt
+  &ltlabel for = "colour1"&gt Black &lt/label&gt &ltbr&gt
+  &ltinput type="checkbox" id="colour2" name="colour2" value="Brown">
+  &ltlabel for = "colour2"> Brown &lt/label&gt &ltbr&gt
+  &ltinput type="checkbox" id="colour3" name="colour3" value="Blonde"&gt
+  &ltlabel for = "colour3"&gt Blonde &lt/label&gt &ltbr&gt
+  &ltinput type="checkbox" id="colour4" name="colour4" value="Other">
+  &ltlabel for = "colour4"&gt Other &lt/label&gt &ltbr&gt
+&lt/form>
+</pre>
+
+<form>
+  What colour of dogs do you like? <br>
+  <input type="checkbox" id="colour1" name="colour1" value="Black">
+  <label for = "colour1"> Black </label> <br>
+  <input type="checkbox" id="colour2" name="colour2" value="Brown">
+  <label for = "colour2"> Brown </label> <br>
+  <input type="checkbox" id="colour3" name="colour3" value="Blonde">
+  <label for = "colour3"> Blonde </label> <br>
+  <input type="checkbox" id="colour4" name="colour4" value="Other">
+  <label for = "colour4"> Other </label> <br>
+</form>
+  
+<h2> Submit </h2>
+<p>
+  There wouldn't be much point filling in these forms if we can't submit them.
+</p>
+
+<pre>
+&ltform&gt
+  &ltinput type="submit" value="Submit"&gt
+&lt/form&gt
+</pre>
+
+  <form>
+    <input type="submit" value="Submit">
+  </form>
+
+Of course there is so much more to learn, this is just to get you started. You're better off looking up specific things as and when you need them as you get more comfortable with the basics. Good luck and happy coding!
+
+
+
+</html>

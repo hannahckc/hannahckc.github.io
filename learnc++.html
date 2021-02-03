@@ -1,0 +1,79 @@
+<h1>C++ for beginners</h1>
+
+<h1>Introduction</h1>
+
+<h2>Outputting to the terminal</h2>
+<p>This is how we print things to the console:</p>
+<pre>
+int main()
+{
+  std:cout << "Hello!\n";
+}</pre>
+<p> will print Hello! to the console. It will print the code exactly as it appears, including spaces, we can also print multiple lines:</p>
+<pre>
+int main()
+{
+  std:cout << " this is\n"
+  std:cout << "some Code..\n"
+}
+</pre>
+will print
+<pre> this is
+some Code.. </pre>
+to the console.
+
+<h2>Compiling and executing</h2>
+<p>Languages like like C++ need to be compiled before they can run, which makes it a <em>programming</em> language. This is unlike languages like Python wich are <em>scripting</em> languages, which are interpreted. <br>
+One way to think about this say you have a recipe for a cake but it is in Spanish. If you ask your Spanish friend to translate the entire recipe, and then you make the cake, it has been compiled. If your friend translates each line to you as you do it, it has been interpreted. </p>
+<p>So once we have written our code, we need to compile it (you can think of it as translate) before we can execute. This creates a new file. Say our file we wan to compile is called hello.cpp, we simply type to the console:</p>
+<code>g++ hello.cpp</code>
+<p>This will automatically name the file a.out. Now say we want to name this file hello:</p>
+<code>g++ hello.cpp -o hello</code>
+<p>Then to execute this file:</p>
+<code>./hello</code>
+
+<h2>Comments</h2>
+<p>We can leave comments on our code, that won't run but are useful for other people reading our code:</p>
+<pre>//Prints "hello!" to the terminal
+std::cout << "Hello!\n" </pre>
+<p>For multiple line comments:</p>
+<pre>/*This is a
+multiple line
+comment */ </pre>
+
+<h1>Variables</h1>
+
+<h2>Initialising a variable</h2>
+<p>If you already know some python, assigning variables is done in a very similar way:</p>
+<code>number = 5;</code>
+<p>number is the name of the variable, the = means we are assigning, and 5 is the value we want our variable to have. We must first create (or initialise) our variable before we assign it:</p>
+<pre>int number;
+number = 5; </pre>
+<p>We can do this all in one line:</p>
+<code> int number = 5;</code>
+<p>Once we have created a variable we can reassign it as many times as we like. Don't forget the semi colon after each line!</p>
+
+<h2>Mathematical operations</h2>
+<p>We can do the following mathematical operators to our variables:</p> <ul>
+<li> <code>+</code> addition </li>
+<li> <code>-</code> subtraction </li>
+<li> <code>*</code> multiplication </li>
+<li> <code>/</code> division </li>
+<li> <code>%</code> modulo (divides and gives the remainder) </li> </ul>
+<pre>number = 5+2;
+number = 8-3;
+number = 5*10;
+number = 20/5;
+number = 12%3; </pre>
+<p>Our variable number ends up as is 0 (as 12 is divisible by 3). Say we want to print this to the terminal:</p>
+<pre>int number = 7
+std::cout << "The number is";
+std::cout << number;</pre>
+<p>The part of the text in " " is a string, any words or text that do not need to be predefined. Anything out of these are things like variables that we have initialised.</p>
+<p>There is an easier way to print this, it is known as <em>chaining</em>:</p>
+<pre>int number = 7
+std::cout << "The number is" << number;</pre>
+
+<h2>User input</h2>
+<p>Instead of assigning variables ourself, we can ask the user to put a value in:</p>
+

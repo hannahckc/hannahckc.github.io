@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+<body>
+<div id="intro">
+<h1> Introduction </h1>
+<p> 
+  Python is a great first language to learn, the syntax is fairly intuitive and it has so many uses. From web to making games, creating graphs to performing numerical analysis. To run it you will need to download it on your computer, along with a program that can run it. I use Anacaonda, but there are others out there too. It is very useful having your code side by side with what it produces when it runs. </p>
+
+</div> <hr>
+
+<h1> Basic commands </h1>
+
+<h2> Print </h2>
+<p> The print statement is extremely useful, it will allow you to print answers to your calculations as well as being able to check your code is running properly midway through functions. The syntax is very simple: </p>
+<code> print("hello") </code>
+<p> The " " lets your computer know it is printing a <em>string</em>, i.e. a word or sentance. You can use either ' ' or " ", but the string must be opened and closed by the same one. Using " " is useful when your string contains apostraphies, for example: </p>
+<code> print("my name isn't John") </code>
+<p> You can add strings together this is known as <em>string concatenation</em>. For example: </p>
+<code> print("My name is " + "Sally") </code> will print My name is Sally to the console.
+
+<h2> Errors </h2>
+<p> If there is something wrong with our code, Python will produce an error, giving us details on what the problem is. If you don't understand what the error means, just type it into Google! Chances are someone has had the exact same problem as you. A common error is: </p>
+<code> SyntaxError </code> 
+<p>which can be caused by things such as mismatched quotes for strings (i.e. " this is a string' or "what about this string'). It should also tell you which line of your code is causing the error. It is important to run your code frequently to check for errors, as they are much easier to fix if you know where it started to go wrong. </p>
+<p> Another common error is <code> NameError </code>. This will occur if you forget to put quote marks around your strings. Python will think your words are variables but won't recognise them unless they have been defined somewhere else in your code. </p>
+
+<h2> Comments </h2>
+<p> Comments are useful for both other people and also you looking back on your code. It might make sense to you now but if you come back to it in a week you might have forgotten what your code does! </p>
+<code> #this is a comment </code>
+<p> This will not run, but can give you more information about what your variable or function does without having to give them long names. </p>
+
+<hr> </div> 
+
+<div id="variables">
+<h1> Variables </h1>
+
+<h2> Declaring variables </h2>
+<p> Variables are used for things that we may want to change later on in the program. To create a variable simply state its name and what you would like to assign it to. This can be a string or a number:  </p>
+<code> dayofweek = "Monday" <br>
+number5 = 5 </code>
+<p> Now if we run <code> print(dayofweek) </code>, we will get the string Monday as the output. </p>
+
+<h2> Mathematical Operations </h2>
+<p> Python is very useful for doing calculations. We can perform oeprations and then assign them to variables: </p>
+<code>
+  product = 3 * 4 <br>
+  division = 15 / 5 <br>
+  addition = 1 + 3 <br>
+  subtraction = 8 - 2 <br>
+  power = 3**2
+</code>
+<p> Note that we simply start a new line for each line of code, we don't need to separate our commands with semi colons like in some languages. You can put spaces between numbers and operators to make your code easier to read. </p>
+<p> Python also has a modulo operator, which gives the remainder of a division. For example: </p>
+<code> is_number_even = 17 % 2 </code>
+This will return 1, so the number is not even.
+
+<h2> Updating variables </h2>
+<p> Say we want to work out how much money we have as a group to put into a kitty: </p>
+<code>
+  james_money = 20 <br>
+  ella_money = 5 <br>
+  carla_money = 15 <br>
+  total_money = james_money + ella_money + carla_money
+</code>
+<p> Now, another friend, Harry has joined, so we need to update the total money: </p>
+<code> 
+  harry_money = 12 <br>
+  total_money = total_money + harry_money
+</code>
+<p> We can write this last line in a more compact way: </p>
+<code> total_money += harry_money </code>
+<p> Now, say carla decides to leave: </p>
+<code> total_money -= carla_money </code>
+<p>
+  We could keep track of the total money by adding a <code> print(total_money) </code> statement each time we update the variable. This is a better way of doing things than just directly adding the numbers together. It allows us to keep track of what is going on, especially if our code becomes longer and more complicated. If we want to change a number we only need to change the initial variable, rather than change a number in multiple lines of code, which leaves us much more vulnerable to errors. It is also much easier for someone else reading our code to see what we are doing and why.
+</p>
+<p> We can also use <code>*=</code> and <code>/=</code> in the same way. </p>
+
+<h2> Variable types </h2>
+<p> We have already seen <em>strings</em> (used for words or sentences) and <em>number</em> (used for integers) variable types in the examples above. Another type is a <em>float</em> which are decimal numbers: </p>
+<code> this_float = 5.5 </code>
+<p> We can make our whole numbers floats as well if we like, especially if we are going to update them to fractions later: </p>
+<code> that_float = 3.0 </code>
+<p> If we multiply a number by a float, we will get a float. We can turn a number into a float by using the built-in function float: </p>
+<code> float(7) </code will produce 7.0
+<p> Similarly, we may want to convert strings into integers or floats and vice versa. For example: </p>
+<code> age = 15 <br>
+my_age = "My age is" + str(age) </code> 
+<p> will produce the string "My age is 15". </p>
+<code> number1 = "50" <br>
+number2 = "5" <br>
+number3 = int(number1) + int(number2) </code>
+<p> will produce the integer 55. </p>
+<p> Another variable type is <em>boolean</em>, which can be one of two values, True or False. True corresponds to an integer value of 1, and False an integer value of 0. This will be useful later when we want our code to run only if certain conditions are true.
+
+
+<h2> Division </h2>
+<p> Integer division and float division are treated very differently in Python. If we divide an integer by another integer, and the answer is not a whole number, Python will round the answer down: </p>
+<code> 15/2 </code> will give 7. If we want to produce a float we need to make one of our numbers a float:
+<code> 15.0/2 </code> or <code> 15/2.0 </code> will give us 7.5. Alternatively we can use the float function given in the last section. Note that doing <code> float(15/2) </code> will not work as it will do the calculation first, before making it a float, giving us 7.0.
+
+
+<h2> More about strings </h2>
+
+<h3> Indexes </h3>
+<p> Each character in a string is assigned a number, making it easy to find the nth letter of a string, for example: </p>
+<code> o = "Isobel"[2] </code>
+<p> Notice that the index starts counting at 0, not 1, so to find I we would need <code>"Isobel"[0]</code>
+<p>We can also slice a string, and select just a part of it:</p>
+<code> "yellow"[1:3] </code> will return ell.
+
+<h3> String methods </h3>
+<p> We can perform useful actions on our strings with the following methods: </p>
+<p> <b>len()</b>, which finds the length of the string: </p>
+<code> i_live = "United Kingdom" <br>
+print(len(i_live)) </code> will print 14 to the console (note it includes spaces in this)
+
+<p> <b>lower()</b>, which gets rid of all capitalisation in your string: </p>
+<code> print(i_live.lower()) </code> will print united kingdom to the console.
+
+<p> <b>upper()</b>, which capitalises all letters in the string: </p>
+<code> print(i_live.upper()) </code> will print UNITED KINGDOM to the console.
+
+<p> When we are simply printing these results to the console, our original string is actually staying the same. If we wanted to permanently change our string, we can simply reassign it: </p>
+<code> i_live = i_live.upper() </code>
+<p> Alternatively, if we want to keep our original string, we can simply assign the string to a new variable: </p>
+<code> i_live_upper = i_live.upper() <br>
+print(i_live) <br>
+print(i_live_upper) <br> </code>
+<p> will print United Kingdom, and UNITED KINGDOM on separate lines.
+<p> len can be used on other variable types, whereas upper and lower, that use dot notation, can only be used on strings.
+
+<h3> String formatting with % </h3>
+<p> This is a better method for concatenating strings (i.e. adding them together, see print section at the start of the page): </p>
+<code> name = "Hannah" <br>
+print("My name is %s" % (name)) </code>
+<p> will print My name is Hannah. The % operator is used to combine strings with variables. The s after the % means the variable type is a string. </p>
+<p> We can also do this with numbers, where we may want to introduce <em>padding</em> (i.e. numbers that go before the variable): </p>
+<code> day = 8 <br>
+print("%02d - 07 - 2020" % (day)) </code>
+<p> will print 08 - 07 - 2020 to the console. The 0 is the number going in front, the 2 means pad to two characters wide, and the d means the number is an integer. </p>
+<p> We can include as many of these % operators as we like, as long as the variables in the brackets at the end match up to the operators within the string: </p>
+name = Hannah <br>
+place = Cambridge <br>
+age = 24 <br>
+print("Hello my name is %s, I live in %s and I am %s years old" % (name, place, age)) </code>
+<p> will print Hello my name is Hannah, I live in Cambridge and I am 24 years old" to the console. Note that you can use %s for numbers if you are not including any padding. </p>
+
+<h2> Date and time </h2>
+<p> It may be useful to get the current date and time. We first need to import this into Python. As your code gets more advanced, for example for creating graphs, you will need to import modules. It is good practice to keep these all at the top of your code. </p>
+<code> from datetime import datetime <br>
+print(datetime.now()) </code>
+<p> The default will print in this format: <code> 2021-01-19 16:56:55.026509 </code> </p>
+<p> We can extract certain parts of this if we don't need the whole thing: </p>
+<code> now = datetime.now() <br>
+print(now.day()) </code>
+<p> will print 19 to the console. We can put this in an easier to read format by using string format from the previous section: </p>
+<code> print("%02d/%02d/%04d" % (now.day, now.month, now.year)) </code>
+<p> will print <code>19/01/2020</code>. We can also use <code> now.hour,now.minute </code> and <code> now.second. </code> </p>
+
+<hr> </div>
+
+<div id="conditionals">
+
+<h1> Conditionals and Control Flow </h1>
+
+<h2> Comparators </h2>
+<p> These will be very useful when we start creating functions and using loops. This is when our boolean type variables will come into play: </p>
+<b>Equal to </b><code>== <br>
+5 == 5 </code> will return <code>True</code> <br>
+<code> 3 == 2 </code> will return <code>False</code> <br> <br>
+
+<b>Not equal to </b><code>!= <br>
+3 != 2 </code> will return <code>True</code> <br> 
+<code>5 != 5 </code> will return <code>False</code> <br> <br>
+
+<b>Less than </b><code>< <br>
+5 < 6 </code> will return <code>True</code> <br>
+<code> 9 < 2 </code> will return <code>False</code> <br> <br>
+
+<b>Less than or equal to </b><code><= <br>
+5 <= 5 </code> will return <code>True</code> <br>
+<code> 7 <= 2 </code> will return <code>False</code> <br> <br>
+
+<b>Greater than </b><code>> <br>
+6 > 5 </code> will return <code>True</code> <br>
+<code> 3 > 7 </code> will return <code>False</code> <br> <br>
+
+<b>Greater than or equal to </b><code>>= <br>
+8 >= 5 </code> will return <code>True</code> <br>
+<code> 2 >= 4 </code> will return <code>False</code>
+
+<h2> and / or </h2>
+<p> We may want to check if two conditions are true, or if just one of a pair of conditions is true, or if a condition is not true, we can use: </p>
+<code> 3 < 4 and 7 == 7 </code>will return <code>True</code> <br>
+<code> 8 == 8 and 4 < 3 </code>will return <code>False</code> <br>
+<code> 7 < 3 or 2 == 2 </code>will return <code>True</code> <br>
+<code> 5 < 3 or 1 == 7 </code>will return <code>False</code> <br>
+<code> 7 < 8 or 5 >= 4 </code>will return <code>true</code> (they can also both be true)<br>
+<code> not 7 > 3 </code>will return <code>True</code> <br>
+<code> not 3 > 2 </code>will return <code>False</code>
+
+<p>We can use more complicated expressions for these:</p>
+<code> 3**2 == 2 + 7 </code>will return <code>True</code> <br>
+<code> 4**2 <= 2**4 and True </code>will return <code>True</code> <br>
+<code> False or 4 != 16**0.5 </code>will return <code>False</code> <br>
+<code> not not False </code>will return <code>False</code> 
+
+<h3>Order of evaluation</h3>
+<p> When there are multiple or / and / not statements, they are evaluated in this order: </p>
+<ul>
+<li> Anything in brackets () </li>
+<li> not </li>
+<li> and </li>
+<li> or </li>
+</ul>
+<p>For example:</p>
+<code> 3 != 9**0.5 or not 7 < 3 and (not True or True) <br>
+--> 3 != 9**0.5 or not 7 < 3 and (False or True) <br>
+--> 3 != 9**0.5 or not 7 < 3 and True <br>
+--> 3 != 9**0.5 or not False and True
+--> 3 != 9**0.5 or True and True <br>
+--> 3 != 9**0.5 or True <br>
+--> True
+</code>
+
+<hr></div>
+
+<div id="functions">
+<h1>Functions</h1>
+
+<h2>If statements</h2>
+<p> We can tell our code to carry out an action only if a statement evaluates to True: </p>
+<pre>if 3 < 4:
+  print("The statement is true!") </pre>
+<p> Note the indentation, this is very important in Python. We can make our if statements multiple lined: </p>
+<pre>if 7==7 and 1 !=2:
+  print("Hello")
+  print("Nice to meet you") </pre>
+  
+<h2>Defining functions</h2>
+<p> We can put our if statements into functions, so that we can run them as many times as we like: </p>
+<pre>def printing_yes():
+  if 7 > 3:
+    print("yes") 
+    
+printing_yes() </pre>
+<p>Let's run through this block of code: </p> <ul>
+<li> The 'def' tells the program we are defining a new function. </li>
+<li> 'printing_yes' is the name of the function </li>
+<li> The empty brackets () mean that we do not put any variables into our function, that it doesn't rely on anything outside of the function. </li>
+</ul>
+</div>
+
+<h2>Else statements</h2>
+<p>If the statement is evaluated to false, we may want to execute a different line of code:</p>
+<pre>
+def is_true():
+  if y > 3:
+    print("yes")
+  else:
+    print("no") </pre>
+<p>Note the indentation.</p>
+
+<h3>Else if</h3>
+<p>We can add multiple else statements with <code>elif</code>(short for else if). Take this function, note this time we have a variable in the brackets:</p>
+<pre>
+def is_five(number):
+  if number > 5:
+    print("bigger")
+  elif number < 5:
+    print("smaller")
+  else:
+    print("the number is 5")
+</pre>
+<p>The code after else will run if all the other conditions fail. The conditions will be checked in the order they appear in the function. Once a condition is met, the function will stop.</p>
+<p>Our functions can contain more than one variable:</p>
+<pre>
+def add(a,b):
+  print(a + b)
+</pre>
+Then we can call this function to run it:
+<code>add(3,5)</code> will print 8 to the console.
+
+<h2>User input</h2>
+<p>We can create a variable that is assigned when the user enters something:</p>
+<code>name = raw_input("Enter your name:") <br>
+print("Hi " + name) </code>
+<p>When the code runs, it will allow the user to enter their name, then print Hi [their name] to the console. </p>
+<p>We can check if the user has actually entered anything:</p>
+<pre>name = raw_input("Enter your name:")
+if len(name)>0:
+  print("Hi " + name)
+else:
+  print("empty") </pre>
+<p>We can go further and check that the user input contains only letters:</p>
+<pre>name = raw_input("Enter your name:")
+if len(name)>0 and name.isalpha():
+  print("Hi " + name)
+else:
+  print("empty") </pre>
+
+<h2>Return statement</h2>
+<p>We may not want to just print the outcome of our functions, but store them to use in other functions.</p>
+<pre>
+def squared(number):
+  return number**2
+
+input = 5
+print(str(squared(input)) + " is %s squared" % (input))
+</pre>
+will print 25 is 5 squared to the console.
+
+<h2>Calling functions within functions</h2>
+<p>We can call functions within other functions:</p>
+<pre>
+def add_two(n):
+  return n + 2
+
+def add_two_multiply_three(n):
+  return 3 * add_two(n)
+</pre>
+ 
+ <h2>Built in functions</h2>
+ <p>Python already has some of its own functions that we don't need to define. Here are some useful ones:</p> <ul>
+ <li><b>max()</b> finds the maximum of a set of integers or floats:<br>
+ <code>max(5.0,1,3,10)</code> will return 10 </li>
+ <li><b>min()</b> finds the minimum of a set of integers or floats:<br>
+ <code>max(2,6,1.5,3.1)</code> will return 1.5 </li>
+ <li><b>abs()</b> finds the absolute value of a number, only takes one argument:<br>
+ <code>abs(-3)</code> and <code>abs(3)</code> will both return 3 </li>
+ <li><b>type()</b> tells us the type of the argument:<br>
+ <code>type(71)</code> will return <code>&lttype 'int'> <br>
+ type(3.8)</code> will return <code>&lttype 'float'> <br>
+ type("Greetings")</code> will return <code>&lttype 'str'></code>
+ </ul>
+ 
+<h2>Importing modules</h2>
+<p>Python has a lot of built in functions, but some we have to import before Python can recognise them. For example:</p>
+<code> sqrt(16)</code> will give us an error.
+We need to add 
+<code> import math </code> at the start of our code. Then we can call
+<code> math.sqrt(16)</code> to get 4.
+<p>If we don't want to have to write math.sqrt every time, we can just import the one function:</p>
+<code>from math import sqrt</code>. Then we only need to call <code> sqrt(16). </code>
+<p>We can also import all the math functions, but still without the need to put math. before everything, simply write:</p>
+<code>from math import *</code>
+
+<hr></div>
+
+<div id="lists">
+<h1>Lists</h1>
+<p>Lists are very useful in python, they can store any number of data pieces with a mixture of types. Here is an example:</p>
+<code>list1 = [4,7,1.3,"element",6]</code>
+
+<h2>Indexes</h2>
+<p>We saw earlier that we can access certain letters of strings using index notation. We can access elements in lists in exactly the same way. Take the list above:</p>
+<code>list1[0]</code> will return 4<br>
+<code>list[4]</code> will return "element"
+<p>We can replace elements in a list by reassigning:</p>
+<code>list1[1] = "new element"</code>. Now if we <code>print(list1)</code> we get:<br>
+<code>[4,"new element", 1.3, "element", 6]</code>
+
+<h2>Built-in functions</h2>
+<p>Python has lots of built-in functions to edit your lists, here are a few:</p>
+<ul>
+<li><b>list.pop(index)</b> removes the item at a specific index of a list, and returns that item: <br>
+<code>[5,8,1].pop(2)</code> returns <code>1</code></li>
+<li><b>list.remove(item)</b> removes a specific item from a list, doesn't return anything: <br>
+<code>[5,8,1].remove(5))</code> means our list now becomes <code>[8,1]</code> </li>
+<li><b>del(list[index])</b> is similar to pop in that it removes an item at a specific index, but doesn't return anything:<br>
+<code>del([5,8,1][1])</code> means our list now becomes <code>[5,1]</code> </li> </ul>
+
+<h2>Operations on lists</h2>
+<p>We can also add lists together:</p>
+<pre>x = [1,2,3,4]
+y = [5,6,7,8]
+print(x + y) </pre>
+give us <code>[1,2,3,4,5,6,7,8]</code>
+
+<p>Another useful thing we can do with lists:</p>
+<code>print([1]*5)</code> gives us <code>[1,1,1,1,1]</code>
+
+<h2>Empty lists</h2>
+<p>It may make more sense to first create an empty list, and then add elements to it:</p>
+<pre>list2=[]
+list2.append(2)
+list2.append(4)
+list3.append(5)
+print(list2)
+</pre>
+will print [2,4,5] to the console.
+<p>We can find the length of our list:</p>
+<code>print(len(list2))</code> will print 3 to the console. Empty lists have a length of 0.
+<p>Instead of append, we can assign 
+
+<h2>List slicing</h2>
+<p>We may want to just select part of a list, for example:</p>
+<pre>names = ["Hannah", "Charlie", "Alex", "Honor", "Amy"]
+slice1 = names[0:2]</pre> will return ["Hannah", "Charlie"] <br>
+<code> slice2 = names[1:4]</code> will return ["Charlie","Alex","Honor"]
+<p>Note that the slice includes the first index, anything in between, and up to but not including the last index.</p>
+<p>We can omit certain indicies from lists using slicing:</p>
+<pre>letters = ['A', 'B', 'C', 'D', 'E']
+print(letters[3::]) </pre> gives <code>['D', 'E']</code> <br>
+<code>print(letters[:2])</code> gives <code>['A', 'B']</code> <br>
+<code>print(letters[::2])</code> gives <code>['A', 'C', 'E']</code>
+<p>The default starting index is 0, the default ending index is the end of the list, and the default stride (or gap between indices) is 1. </p>
+<p>A negative index will start at the end of the list and work backwards:</p>
+<code>print(letters[::-2])</code> gives <code>['E', 'C', 'A']</code>
+
+<h2>Anonymous Functions</h2>
+<p>Python allows us to use functions like variables, which can be very powerful. This is valled <em>functional programming</em>. We use the lambda variable to do this:</p>
+<code>lambda x: x % 2 == 0</code> is the same as:
+<pre>def even(x):
+  return x % 2 == 0</pre>
+<p>We don't need to give the function a name, hence the name anonymous function. We can pass this through filter, which tells the program which elements of our list we want. It is easiest to see this with an example:</p>
+<pre>my_list = [1,2,3,4,5,6,7,8]
+print(filter(lambda x: x % 2 == 0, my_list))</pre>
+gives us <code>[2,4,6,8]</code>
+<p>Lambda functions are useful for doing something quickly, but if you are going to use a function multiple times, you are better off using def.</p>
+
+
+
+<h2>Strings as lists</h2>
+<p>We can treat strings exactly as lists and slice them in the same way:</p>
+<pre>numbers = "onetwothree"
+one = numbers[0:3]
+two = numbers[3:6]
+three = numbers[6:11]</pre>
+<p>As we did with strings, we can find the length of our lists:</p>
+<code>print len([6,"hello",5,1])</code> gives us 4.
+
+<h2>List sorting</h2>
+<p>Python has a useful built in function that sorts lists. If our lists is made of strings, it will put them in alphabetical order. If our list is made of numbers, it will put them in ascending order.</p>
+<pre>words=["orange", "apple", "pear"]
+numbers=[9,1,4,7,6]
+words.sort()
+numbers.sort</pre>
+gives us <code>["apple", "orange", "pear"]</code> and <code>[1,4,6,7,9]</code>. Note that this function doesn't work if the list has a mix of variable types.
+
+<h2>Removing items</h2>
+<p>We can get rid of specific elements from a list, take the words list from above:</p>
+<pre>words.remove("pear")</pre>
+<p>So our list now reads <code>["orange", "apple"]</code></p>
+
+
+<h2>Dictionaries</h2>
+<p>Dictionaries are similar to lists, but we access the items by looking up a <em>key</em> instead of an index. They are written in curly brackets in key : value pairs:</p>
+<pre>surname = {"Hannah" : "Campbell", "John" : "Goodman",  "Allie" : "Johnson"}
+print(surname["John"]) </pre>
+will print Goodman.
+<p>The length of a dictionary is the number of pairs:</p>
+<code>print(len(age))</code> will print 3. 
+
+<h3> Adding values </h3>
+<p>As with lists, we can start with an empty dictionary, and add items to it:</p>
+<pre>prices={}
+prices["book"] = 9.50
+prices["pen"] = 2
+prices["pencil"] = 1.3
+print(prices)</pre>
+will print <code>{"book" : 9.50, "pen" : 2, "pencil" : 1,3}</code>
+
+<h3>Changing values</h3>
+<p>We can delete values from our dictionaries. Using the prices list from above:</p>
+<pre>del prices["pen"]</pre>
+<p>and update values:</p>
+<pre>prices["book"] = 11
+print(prices)</pre>
+Our dictionary is now <code>{"book" : 11, "pencil" : 1.3}</code>
+
+
+<hr></div>
+
+<div id="loops">
+<h1>Loops</h1>
+<p>Loops are very useful for performing an action on a large set of data without having to do them all individually, which would take a very long time!</p>
+
+<h2>For loops</h2>
+
+<h3>For loops in lists</h3>
+<p>Say we have a list of names, and want to say hi to all of them:</p>
+<pre>names = ["Dan", "Henry", "Peter"]
+for i in names:
+  print("Hi " + i) </pre>
+<p>Our loop goes through every item in the list, and prints Hi followed by the name. We can use any variable for i, and note the semi-colon at the start of our code block. Let's look at another example:</p>
+<pre>list1=[3,6,1,9]
+list2=[]
+for number in list1:
+  list2.append(2*number) </pre>
+<p>This loop takes each number in list1, multiplies it by 2, and adds it to list2. So our list2 now looks like <code>[6,12,2,18]</code>. </p>
+
+<p>Say we want to edit every element in a list. We need to use the built-in <em>range(start,stop,step)</em> function. This can take 1, 2 or 3 arguments: </p>
+<code>range(3)</code> is <code>[0,1,2]</code> <br>
+<code>range(1,5)</code> is <code>[1,2,3,4]</code> <br>
+<code>range(2,11,2)</code> is <code>[2,4,6,8,10]</code>
+<p>Note that it stops one before the stop argument. This is very useful for lists, as the index starts at 0 and ends 1 before the end of the list. So if we want to add 2 to every element in a list:</p>
+<pre>n = [1,7,2,9]
+def add_two(x)
+  for i in range(0,len(x)):
+    x[i] = x[i] + 2
+
+add_two(n)
+print(n) </pre>
+Gives us <code>[3,9,4,11]</code>. The index runs from 0 up to 3, which covers the whole list.
+  
+<h3>For loops in dictionaries</h3>
+<p>We can apply these principles to dictionaries:</p>
+<pre>
+dict1 = {"Henry" : "brother", "Alice" : "sister", "Tanya" : "mother", Craig : "dad"}
+for key in dict1:
+  print dict1[key] </pre>
+will print 
+<pre>brother
+sister
+mother
+father </pre>
+<p>We can look in detail at what this loop is doing. For the first iteration, it takes the first key, "Henry", and prints its value, brother. It then moves on to the second key, "Alice", and prints its value, sister. It does this for every key in the dictionary. </p>
+
+<h2>Loops with if statements</h2>
+<p>It is sometimes useful to check a condition for each iteration of our loop. For example, say we want to check how many positive numbers we have in a list:</p>
+<pre>numbers = [-1,3,7,14,-4,6]
+counter = 0
+for num in numbers:
+    if num > 0:
+        counter += 1 
+print(counter) </pre> will output 4.
+The indentation is very important in Python. Here the print command is outside of the loop, but let's look at what happens if we indent it:</p>
+<pre>for num in numbers:
+    if num > 0:
+        counter += 1
+    print("counter") </pre>
+<p>Our counter will now be printed after every check, so we would get:</p>
+<pre>0
+1
+2
+3
+3
+4 </pre>
+<p>We can move it further, into the if statement, which means it will only print when the if statement is evaluated for true:</p>
+<pre>for num in numbers:
+    if num > 0:
+        counter += 1
+        print(counter)</pre>
+will output:
+<pre>
+1
+2
+3
+4 </pre>
+</div>
+
+<h2>Loops in functions:</h2>
+<p>It usually makes sense to turn these loops into a function, so we can test out multiple lists, for example, here is a function that checks how many even elements a list has:</P>
+<pre>def check_even(list):
+    counter = 0
+    for item in list:
+        if item%2 == 0:
+            counter += 1
+    print(counter)
+
+check_even([2,4,6,1,9])
+check_even([13,21,1,7]) </pre>
+will print <pre>3
+0</pre>
+<p>We can do this for strings as well, which we know can be treated very similarly to lists:</o>
+<pre>def print_as(word):
+    for letter in word:
+        if letter == "a":
+            print(letter)
+  
+print_as("banana") </pre> will print
+<pre>a
+a
+a </pre>
+
+<p>Let's look at a more complicated iteration. Say we want to make a function that takes a list of lists, and turns it into one list:</p>
+<pre>lists1=[[1,2,3,4],[5,6,7]]
+def flatten(n):
+    final = []
+    for lists in n:
+        for numbers in lists:
+            final.append(numbers)
+    return final
+
+print(flatten(lists1))
+</pre>
+<p>We iterate through each list, and then through each number in that list, and add it to an empty list.</p>
+
+<h2>Break</h2>
+<p>The command <code>break</code> will stop the loop immediately and not run through the rest of it. For example, we may want to keep producing random numbers until we get 10:</p>
+<pre>import random
+for i in range(0,1000):
+    number = random.randint(0,100)
+    print(number)
+    if number == 5:
+        break </pre>
+        
+<p>This loop generates a random integer from 1 to 100, 1000 times. It prints the number each time and stops once it reaches 5.</p>
+
+<h2>While loops</h2>
+<p>While loops are similar to for loops, but they carry on going until a particular condition has been met. Let's say we want to print a statement 5 times:</p>
+<pre>counter = 0
+while counter < 5:
+  print("this loop is running")
+  counter += 1 </pre>
+<p>With while loops, we must define our counter or number before the loop, and change it for each loop. If we didn't increase the counter, we would be stuck in an infinite loop, which can make our code crash!</p>
+<p>We can convert our loop from the previous section into a while loop, which takes out the need for the break:</p>
+<pre>i = 0
+while i !=5:
+  i = random.randint(0,100)
+  print(i) </pre>
+<p>Here, we don't need to set a number of times to run the loop, it will just keep going until the condition stops being true, in this case, when i = 5. </p>
+
+<h2>Finding letters in a string</h2>
+<p>It is often useful to check if a particular letter is in a string, or a number is in a list:</p>
+<pre>word = "Character"
+for char in word:
+  if char is in "A":
+    print("yes it is") </pre>
+<p>This loop runs through each letter in the word, and checks if it is inside the string "A". This will print "yes it is" twice.</p>
+<p>For numbers it is even simpler:</p>
+<pre>list1 = [5,1,3,8]
+if 3 in list1:
+  print("there is a 3")
+else:
+  print("there is no 3")</pre>
+<p>We can go further and remove specific elements from a list:</p>
+<pre>list1 = [5,1,3,8,9,5,1,1]
+if 5 in list1:
+  while 5 in list1:
+    list1.remove(5)
+print list1</pre>
+<p>We need to include the initial if statement, otherwise Python will throw an error if the list doesn't contain any 5s. The while loop needs to start from somewhere! Our list1 now looks like <code>[1,3,8,9,1,1]
+
+<h2>List Comprehension</h2>
+<p>We have seen that we can build and edit lists with loops, but there is a more efficient way of doing this, known as list comprehension. Say we want to make a list of numbers 1 to 5 squared:</p>
+<code>squared_list = [x**2 for x in range(1,6)]</code> gives <code>[1,4,9,16,25]</code>
+<p>We can take this further and add a condition. Say we only want the squares of even numbers:</p>
+<code>even_squares = [x**2 for x in range(1,6) if x%2 == 0]</code> gives <code>[4,16].
+
+<h2>List slicing</h2>
+<hr></div>
+
+<h1>Object Orientated Programming principles in Python:</h1>
+
+<h2>Classes</h2>
+<p>Classes contain class attributes (ie properties that are true for all instances of the class), instance attributes (ie properties that can be defined for each specific instane) and instance methods (ie functions)
+<pre>
+class Labrador:
+    #class attribute
+    species = "dog"
+  
+    #instance attributes
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+  
+    #instance method
+    def bark(self):
+        return "{} is now barking".format(self.name)
+   
+    #instance method that takes an argument
+    def walkwith(self, person):
+        return "{} is on a walk with {}".format(self.name, person)
+        
+#instantiate the Labrador class
+daisy = Labrador("Daisy",9)
+goldie = Labrador("Goldie",3)
+
+#access the class attributes
+print("Daisy is a {}".format(daisy.__class__.species))
+print("Goldie is also a {}".format(goldie.__class__.species))
+
+#access the instance attributes
+print("{} is {} years old".format(daisy.name, daisy.age))
+print("{} is {} years old".format(goldie.name, goldie.age))
+
+#access the instance methods
+print(daisy.bark())
+print(goldie.walkwith("Hannah"))
+</pre>
+<p>This will output:</p>
+<pre>Daisy is a dog
+Goldie is also a dog
+Daisy is 9 years old
+Goldie is 3 years old
+Daisy is now barking
+Goldie is on a walk with Hannah
+</pre>
+<p>We can update attributes after instantiating:</p>
+<pre>daisy.age = 10
+print(daisy.age) </pre>
+will now output 10.
+
+<h2>Abstraction</h2>
+<p>Abstraction is the concept of hiding away the inner workings of implementing our class from anything outside the class. To help you understand this, think of your mobile phone. All you need to worry about are the on and volume buttons. There is a lot going on inside that we can't see or change, we only see the outer buttons. </p>
+<p>Take the example above, all we need to know that calling daisy.bark() will make her bark, we don't care how!
+
+<h2>Parent and child class (inheritance)</h2>
+<p>We can create a child class from a parent class, which is a new class that <em>inherits</em> the attributes and methods from the parent class. You can update these, and add new ones:</p>
+<pre>
+#parent class
+class Dog:
+    def __init__(self, name):
+        self.name = name
+        print("Woof woof")
+    
+    def whatami(self):
+        print("Dog")
+    
+    def eat(self):
+        print("{} is eating".format(self.name))
+
+#child class
+class Spaniel(Dog):
+    def __init__(self, name):
+        super().__init__(name)
+        print("A spaniel appears!")
+    
+    def whatami(self):
+        print("Spaniel")
+    
+    def play(self):
+        print("I like to play")
+    
+dylan = Spaniel("Dylan")
+dylan.eat()
+dylan.whatami()
+dylan.play()
+</pre>
+<p>This will output</p>
+<pre>
+Woof woof
+A spaniel appears!
+Dylan is eating
+Spaniel
+I like to play
+</pre>
+<p>The <code>super()</code> allows us to call the init method from the parent class. We can see that the Spaniel class has inherited the eat method, and that we have updated the whatami method. We have also extended the parent class, by adding a new method, play. </p>
+
+<h2>Encapsulation</h2>
+<p>We saw earlier that we can modify the class attributes for an instance. However, we may want to restrict access to some of an object's components. This is called encapsulation.  <br>
+To do this we create private attributes, by adding __ :</p>
+<pre>
+class Person:
+    def __init__(self):
+        self.__age = 20
+        
+    def howold(self):
+        print("I am {} years old".format(self.__age))
+        
+    def changeage(self,newage):
+        self.__age = newage
+        
+john = Person()
+john.howold()
+john.__age = 25
+john.howold()
+john.changeage(25)
+john.howold() </pre>
+will output:
+<pre>
+I am 20 years old
+I am 20 years old
+I am 25 years old </pre>
+<p>The init method sets the age to 20. We can see that trying to change the age directly doesn't do it, as the attribute is private. We have to call the method within the class that changes the age. </p>
+
+<h2>Polymorphism</h2>
+<p>Polymorphism allows us to use a common method to perform an action on multiple different data types. Suppose we want to find the area of multiple shapes using the same method, but they require different functions:</p>
+<pre>class Rectangle:
+    def __init__(self,width,height):
+        self.width = width
+        self.height = height
+        
+    def area(self):
+        print(self.width*self.height)
+
+class Circle:
+    def __init__(self,radius):
+        self.radius = radius
+    
+    def area(self):
+        print(3.14*(self.radius**2))
+
+rec = Rectangle(3,4)
+cir = Circle(2)
+
+def find_area(shape):
+    shape.area()
+
+find_area(rec)
+find_area(cir) </pre>
+will output <pre>12
+12.56 </pre>
+<p>Both of the classes we defined have a common function, area, so we can run both the classes through the find_area function. </p>
+
+</body>
+</html>
